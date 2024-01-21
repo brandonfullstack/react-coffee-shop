@@ -4,6 +4,10 @@
 
 #### _An app for tracking orders from partner coffee shops_
 
+## Component Tree:
+
+![Component Tree](./src/img/coffee-shop-diagram.png)
+
 ## Technologies Used
 
 * _HTML_
