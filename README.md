@@ -1,12 +1,12 @@
-# _React Coffee Shop_
+# _React Coffee supply_
 
 #### By _**Brandon Wright**_
 
-#### _An app for tracking orders from partner coffee shops_
+#### _An app for tracking orders from partner coffee supplys_
 
 ## Component Tree:
 
-![Component Tree](./src/img/coffee-shop-diagram.png)
+![Component Tree](./src/img/coffee-supply-diagram.png)
 
 ## Technologies Used
 
