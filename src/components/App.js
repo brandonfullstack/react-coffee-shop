@@ -1,12 +1,12 @@
 import React from "react";
 import Header from "./Header";
-import OrderList from "./OrderList";
+import Inventory from "./Inventory";
 
 function App(){
   return (
     <React.Fragment>
       <Header />
-      <OrderList />
+      <Inventory />
       <hr/>
     </React.Fragment>
   );

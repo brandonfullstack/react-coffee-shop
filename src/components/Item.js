@@ -1,13 +1,13 @@
 import React from "react";
 
-function Order(){
+function Item(){
   const buyer = "Starbucks";
-  const orderNumber = "12345";
+  const itemNumber = "12345";
   const quantity = "1";
   
   return (
     <React.Fragment>
-      <h3>Order Number: {orderNumber}</h3>
+      <h3>Item Number: {itemNumber}</h3>
       <h3>Company: {buyer}</h3>
       <h3>Quantity: {quantity}</h3>
       <h3>Total: ({quantity} x 5)</h3>
@@ -16,4 +16,4 @@ function Order(){
   );
 }
 
-export default Order;
+export default Item;
