@@ -7,7 +7,6 @@ function App(){
     <React.Fragment>
       <Header />
       <Inventory />
-      <hr/>
     </React.Fragment>
   );
 }
