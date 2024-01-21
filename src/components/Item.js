@@ -1,23 +1,26 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-function Item(){
-  const itemName = "Blue Mountain Coffee";
-  const itemRoastLevel = "Medium";
-  const itemOrigin = "Jamaica";
-  const itemPrice = 12;
-  const itemQuantity = 130;
-  
+function Item(props){  
   return (
     <React.Fragment>
-      <h3>Name: {itemName}</h3>
-      <h3>Roast Level: {itemRoastLevel}</h3>
-      <h3>Origin: {itemOrigin}</h3>
-      <h3>Price: {itemPrice}</h3>
-      <h3>Quantity: {itemQuantity}</h3>
-      <h3>Total: {itemQuantity * itemPrice}</h3>
+      <h3>Name: {props.itemName}</h3>
+      <h3>Roast Level: {props.itemRoastLevel}</h3>
+      <h3>Origin: {props.itemOrigin}</h3>
+      <h3>Price: {props.itemPrice}</h3>
+      <h3>Quantity: {props.itemQuantity}</h3>
+      <h3>Total: {props.itemQuantity * props.itemPrice}</h3>
       <hr/>
     </React.Fragment>
   );
 }
+
+Item.propTypes = {
+  itemName: PropTypes.string.isRequired,
+  itemRoastLevel: PropTypes.string.isRequired,
+  itemOrigin: PropTypes.string.isRequired,
+  itemPrice: PropTypes.number.isRequired,
+  itemQuantity: PropTypes.number.isRequired
+};
 
 export default Item;
