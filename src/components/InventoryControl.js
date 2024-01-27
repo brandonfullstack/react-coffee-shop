@@ -7,7 +7,8 @@ class InventoryControl extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      formVisibleOnPage: false
+      formVisibleOnPage: false,
+      mainInventory: []
     };
   }
 
@@ -17,20 +18,27 @@ class InventoryControl extends React.Component {
     }));
   }
 
+  handleAddingNewItemToInventory = (newItem) => {
+    const newMainInventory = this.state.mainInventory.concat(newItem);
+    this.setState({mainInventory: newMainInventory,
+                  formVisibleOnPage: false });
+  }
+
   render(){
     let currentlyVisibleState = null;
-    let addItemButton = null; // new code
+    let buttonText = null;
     if (this.state.formVisibleOnPage) {
-      currentlyVisibleState = <NewItemForm />
+      currentlyVisibleState = <NewItemForm onNewItemCreation={this.handleAddingNewItemToInventory}/>;
+      buttonText = "Return to Inventory";
     } else {
-      currentlyVisibleState = <Inventory />
-      addItemButton = <button onClick={this.handleClick}>Add item</button>
+      currentlyVisibleState = <Inventory inventory={this.state.mainInventory} />;
+      buttonText = "Add Item";
     }
     return (
       <React.Fragment>
         {currentlyVisibleState}
-        {addItemButton}
-      </ React.Fragment>
+        <button onClick={this.handleClick}>{buttonText}</button>
+      </React.Fragment>
     );
   }
 
