@@ -20,23 +20,27 @@ import PropTypes from "prop-types";
 // ];
 
 function Inventory(props) {
+
   return (
     <React.Fragment>
-      <hr/>
-      {props.inventory.map((item, index) =>
-        <Item name={item.name}
+      <hr />
+      {props.inventory.map((item) =>
+        <Item
+          whenItemClicked={props.onItemSelection} name={item.name}
           origin={item.origin}
           roastLevel={item.roastLevel}
           price={item.price}
           quantity={item.quantity}
-          key={index} />
+          id={item.id}
+          key={item.id} />
       )}
     </React.Fragment>
   );
 }
 
 Inventory.propTypes = {
-  inventory: PropTypes.array
+  inventory: PropTypes.array,
+  onItemSelection: PropTypes.func
 };
 
 export default Inventory;

@@ -1,13 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { v4 } from 'uuid';
+import ReusableForm from "./ReusableForm";
 
-function NewItemForm(props){
+function NewItemForm(props) {
 
   function handleNewItemFormSubmission(event) {
     event.preventDefault();
     props.onNewItemCreation({
-      name: event.target.name.value, 
+      name: event.target.name.value,
       origin: event.target.origin.value,
       roastLevel: event.target.roastLevel.value,
       price: parseInt(event.target.price.value),
@@ -23,29 +24,9 @@ function NewItemForm(props){
 
   return (
     <React.Fragment>
-      <form onSubmit={handleNewItemFormSubmission}>
-        <input
-          type='text'
-          name='name'
-          placeholder='Name' /><br></br>
-        <input
-          type='text'
-          name='origin'
-          placeholder='Origin' /><br></br>
-        <input
-          type='text'
-          name='roastLevel'
-          placeholder='Roast Level' /><br></br>
-        <input
-          type='text'
-          name='price'
-          placeholder='Price' /><br></br>
-        <input
-          type='text'
-          name='quantity'
-          placeholder='Quantity' /><br></br>
-        <button type='submit'>Add</button>
-      </form>
+      <ReusableForm
+        formSubmissionHandler={handleNewItemFormSubmission}
+        buttonText="Add" />
     </React.Fragment>
   );
 }
