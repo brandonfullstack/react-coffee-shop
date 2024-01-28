@@ -5,12 +5,7 @@ function Item(props) {
   return (
     <React.Fragment>
       <div onClick={() => props.whenItemClicked(props.id)}>
-        <h3>Name: {props.name}</h3>
-        <h3>Origin: {props.origin}</h3>
-        <h3>Roast Level: {props.roastLevel}</h3>
-        <h3>Price: {props.price}</h3>
-        <h3>Quantity: {props.quantity}</h3>
-        <h3>Total: {props.quantity * props.price}</h3>
+        <h3>{props.name} ☕️</h3>
         <hr />
       </div>
     </React.Fragment>
@@ -18,12 +13,12 @@ function Item(props) {
 }
 
 Item.propTypes = {
-  name: PropTypes.string,
-  origin: PropTypes.string,
-  roastLevel: PropTypes.string,
-  price: PropTypes.number,
-  quantity: PropTypes.number,
-  id: PropTypes.string,
+  name: PropTypes.string.isRequired,
+  origin: PropTypes.string.isRequired,
+  roastLevel: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  quantity: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
   whenItemClicked: PropTypes.func
 };
 

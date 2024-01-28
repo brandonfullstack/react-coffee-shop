@@ -15,11 +15,6 @@ function NewItemForm(props) {
       quantity: parseInt(event.target.quantity.value),
       id: v4()
     });
-    console.log(event.target.name.value);
-    console.log(event.target.origin.value);
-    console.log(event.target.roastLevel.value);
-    console.log(event.target.price.value);
-    console.log(event.target.quantity.value);
   }
 
   return (
