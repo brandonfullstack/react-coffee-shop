@@ -8,6 +8,22 @@
 
 ![Component Diagram](./src/img/coffee-supply-diagram.png)
 
+## Component Tree
+```
+├── App.js
+├── Header.js
+├── InventoryControl.js
+│   ├── NewItemForm.js
+│   ├── ReusableForm.js
+│   ├── Inventory.js
+│   │   └── Item.js
+│   └── ItemDetail.js
+│       └── EditItemForm.js
+└── img
+    └── coffee-supply-diagram.png
+        flex.png
+```
+
 ## Technologies Used
 
 * _HTML_
@@ -15,6 +31,12 @@
 * _JavaScript_
 * _Git_
 * _React_
+
+## Setup/Installation Steps
+Step 1 - Clone project with: `git clone https://github.com/brandonfullstack/react-coffee-supply`
+Step 2 - Navigate to project directory with: `cd react-coffee-supply`. 
+Step 3 - Install dependencies with: `npm install`.
+Step 4 - Start application with: `npm run start`.
 
 ## Getting Started with Create React App
 
